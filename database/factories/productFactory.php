@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\product>
  */
-class productFactory extends Factory
+class ProductFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,6 +18,11 @@ class productFactory extends Factory
     {
         return [
             //
+            'product_name' => $this->faker->nameProduct(),
+            'product_price' => $this->faker->price(),
+            'product_quantity' => $this->faker->quantity(),
+            'description' => $this->faker->paragraph(5)
+
         ];
     }
 }
